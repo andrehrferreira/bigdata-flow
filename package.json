@@ -1,0 +1,27 @@
+{
+    "name": "bigdata-flow",
+    "version": "0.0.1",
+    "description": "Queue manager for data entry and editing with Redis and MongoDB for large data streams",
+    "author": "Andre Ferreira <andrehrf@gmail.com>",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andrehrferreira/bigdata-flow"
+    },
+    "keywords": [
+        "queue",
+        "redis",
+        "mongodb",
+        "bigdata",
+        "flow"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/andrehrferreira/bigdata-flow/issues"
+    },
+    "homepage": "https://github.com/andrehrferreira/bigdata-flow",
+    "dependencies": {
+        "mongodb": "^3.0.5",
+        "redis": "^2.8.0"
+    }
+}
