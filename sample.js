@@ -11,8 +11,11 @@ const crypto = require("crypto"),
 Flow.then((flow) => {
     flow.synchronize();
 
-    for(let i = 0; i < 10000; i++)
-        flow.insert("coltest", { hash: crypto.createHash('sha256').update(new Buffer(i), 'utf8').digest("hex") })
+    for(let i = 0; i < 10000; i++){
+        flow.insert("coltest", {
+            hash: crypto.createHash('sha256').update(new Buffer(i), 'utf8').digest("hex")
+        });
+    }
 }).catch((err) => {
     console.log(err);
 });
