@@ -38,8 +38,11 @@ The insert function will synchronize with MongoDB using the 'insert' function th
 ```js
 const crypto = require("crypto");
 
-for(let i = 0; i < 100000; i++)
-    flow.insert("mycollection", { hash: crypto.createHash('sha256').update(new Buffer(i), 'utf8').digest("hex") })
+for(let i = 0; i < 100000; i++){
+    flow.insert("mycollection", {
+        hash: crypto.createHash('sha256').update(new Buffer(i), 'utf8').digest("hex")
+    });
+}
 ```
 
 In the example above will be inserted 100,000 hash sequentially generated to popular Redis and synchronize with MongoDB according to the configured limit
