@@ -115,13 +115,13 @@ class BigdataFlow {
                                                 });
                                             break;
                                             case "update":
-                                                self.mongodb.collection(data.collection).update(data.query, data.data, (err) => {
+                                                self.mongodb.collection(data.collection).update(data.query, { $set: data.data }, (err) => {
                                                     if(err) console.log(err);
                                                     else self.redis.del(key);
                                                 });
                                             break;
                                             case "update":
-                                                self.mongodb.collection(data.collection).update(data.query, data.data, { upsert : true }, (err) => {
+                                                self.mongodb.collection(data.collection).update(data.query, { $set: data.data }, { upsert : true }, (err) => {
                                                     if(err) console.log(err);
                                                     else self.redis.del(key);
                                                 });

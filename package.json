@@ -1,6 +1,6 @@
 {
     "name": "bigdata-flow",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Queue manager for data entry and editing with Redis and MongoDB for large data streams",
     "author": "Andre Ferreira <andrehrf@gmail.com>",
     "main": "index.js",
